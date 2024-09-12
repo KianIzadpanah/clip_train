@@ -1,0 +1,29 @@
+data_params:
+  data_path: /kaggle/input/cmu-fof
+  num_workers: 4
+  patch_size: 512
+  train_batch_size: 2
+  val_batch_size: 2
+exp_params:
+  LR: 0.0002
+  kld_weight: 0.0
+  manual_seed: 42
+  scheduler_gamma: 0.0
+  weight_decay: 0.0
+logging_params:
+  name: VQVAE
+  save_dir: logs/
+model_params:
+  beta: 0.25
+  embedding_dim: 3
+  hidden_dims:
+  - 128
+  - 256
+  img_size: 512
+  in_channels: 16
+  name: VQVAE
+  num_embeddings: 512
+trainer_params:
+  accelerator: gpu
+  devices: 1
+  max_epochs: 20
